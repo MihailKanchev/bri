@@ -1,5 +1,4 @@
-### django-react web app
-online store
+# django-react web app
 
 ### Architecture
 <img src="https://i.ibb.co/yQX4HST/architecture.png">
