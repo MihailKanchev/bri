@@ -2,7 +2,7 @@
 online store
 
 ### Architecture
-<img src="https://ibb.co/kSxmN1n">
+<img src="https://i.ibb.co/yQX4HST/architecture.png">
 
 ### Model ERD 
 <img src="https://i.ibb.co/FXhwRrJ/er.png">
