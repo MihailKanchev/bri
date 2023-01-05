@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 const ProductListItem = ({product}) => {
   return (
@@ -6,9 +7,9 @@ const ProductListItem = ({product}) => {
         <div>id: {product.id}</div>
         <h3>{product.name}</h3>
         <div>{product.price}</div>
-        <a href={`http://localhost:3000/products/${product.id}/`}>
+        <Link to={`/products/${product.id}`}>
             <img className='w-28'src={'http://127.0.0.1:8000'+product.image}/>
-        </a>
+        </Link>
     </div>
   )
 }
