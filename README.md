@@ -2,4 +2,4 @@
 online store
 
 ### Model ERD 
-![ERD](https://i.ibb.co/FXhwRrJ/er.png)
+<img src="https://i.ibb.co/FXhwRrJ/er.png">
