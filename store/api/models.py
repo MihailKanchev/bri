@@ -1,21 +1,28 @@
 from django.db import models
-from django.contrib.auth.models import User
+from django.conf import settings
 # Create your models here.
 
 class Customer(models.Model):
-    name = models.CharField(max_length=200, null = True)
+    firstName = models.CharField(max_length=200, null = True)
+    lastName = models.CharField(max_length=200, null = True)
     email = models.CharField(max_length=200, null = True)
+    phone = models.CharField(max_length=200, null = True)
 
 class Product(models.Model):
-    name = models.CharField(max_length=200, null = True)
+    name = models.CharField(max_length=200, null=True)
     price = models.DecimalField(max_digits=7, decimal_places=2)
-    image = models.ImageField(null=True, blank = True)
+    description = models.TextField(default='', null=True, blank=True)
 
     def __str__(self):
         return self.name
 
+
+class ProductImage(models.Model):
+    product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name="images")
+    image = models.ImageField(default="test", null=True, blank=True)
+    
     @property
-    def imageURL(self):
+    def image_url(self):
         try:
             url=self.image.url
         except:
