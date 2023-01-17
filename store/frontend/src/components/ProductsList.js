@@ -1,9 +1,6 @@
-
 import ProductListItem from '../components/ProductListItem'
 
-
 const ProductsList = ({products}) => {
-    
 
     return (
         <div>
@@ -11,6 +8,7 @@ const ProductsList = ({products}) => {
                 {products.map((product, index) => (
                     <ProductListItem key={index} product={product}/>
                 ))}
+                
             </div>
         </div>
     )

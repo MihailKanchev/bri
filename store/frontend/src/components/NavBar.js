@@ -13,23 +13,31 @@ const NavBar = () => {
             <div className="  ">
                 <div className="flex justify-center items-center space-x-20">
                     <div className=" transition duration-500 hover:scale-125">
-                        
-                        <button className="text-red-700 font-semibold">
-                            Бутик
-                        </button>
+                        <Link to={`/`}>
+                            <button className="text-red-700 font-semibold">
+                                Бутик
+                            </button>
+                        </Link>
                     </div>
                     
                     <div className="">
                         
-                        <a href="http://localhost:3000/"><Logo/></a>
+                    <Link to={`/`}><Logo/></Link>
                        
                     </div>
                     <div className=" transition duration-500 hover:scale-125 relative">
-                        <a href="http://localhost:3000/about/">
+                        <Link to={`/about`}>
                             <button className="text-red-700 font-semibold ">
                                 За мен
                             </button>
-                        </a>
+                        </Link>
+                    </div>
+                    <div className=" transition duration-500 hover:scale-125 relative">
+                        <Link to={`/cart`}>
+                            <button className="text-red-700 font-semibold ">
+                                Количка
+                            </button>
+                        </Link>
                     </div>
                 </div>
                     
